@@ -74,7 +74,7 @@ LOCALE_DIR = os.path.join(SCRIPT_DIR, "locales")
 GITHUB_LOCALE_URL = "https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/locales/"
 
 MENU_BAHASA = {
-    "1": {"code": "id", "name": "Bahasa Indonesia"},
+    "1": {"code": "id", "name": "Indonesia"},
     "2": {"code": "en", "name": "English"}
 }
 
@@ -191,7 +191,7 @@ def banner() -> None:
   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝       ╚═════╝ ╚═════╝ ╚══════╝
 """, Fore.CYAN))
     print(colored(mid, Fore.CYAN))
-    print(colored("        ⚔  UNLOCK BOOTLOADER HERO  ⚔", Fore.YELLOW))
+    print(colored("        ⚔  UNLOCK BOOTLOADER  ⚔", Fore.YELLOW))
     print(colored(f"           {CURRENT_VERSION}", Fore.GREEN))
     print(colored("        GitHub @ahmaduntungxz-max", Fore.BLUE))
     print(colored(mid, Fore.CYAN))
@@ -296,11 +296,17 @@ def get_big_cores(threshold: int = 2_000_000) -> list[int]:
         except OSError:
             continue
     cores.sort()
+    print()
+    print(colored("  ┌─ CPU Detection", Fore.CYAN))
     if cores:
-        for c in cores:
-            log("[Info.]", f"CPU{c} " + _t("cpu_ok"), Fore.WHITE)
+        core_list = ", ".join(f"CPU{c}" for c in cores)
+        print(colored(f"  │  Big cores : {core_list}", Fore.GREEN))
+        print(colored(f"  │  Total     : {len(cores)} performance core(s)", Fore.WHITE))
+        print(colored("  └─ Affinity ready", Fore.CYAN))
     else:
-        log("[Info.]", _t("cpu_no"), Fore.WHITE)
+        print(colored("  │  " + _t("cpu_no"), Fore.YELLOW))
+        print(colored("  └─ Using default scheduling", Fore.CYAN))
+    print()
     return cores
     
 # ─────────────────────── TOKEN CHECK ─────────────────────── #
@@ -662,11 +668,15 @@ def main() -> None:
     init_language()
 
     # check_update()  ← dinonaktifkan agar tidak muncul notifikasi update
-    print()
     big_cores = get_big_cores()
-    print()
 
     # ── 1. Input & validasi cookie ──
+    print(colored("  ┌─ Token / Cookie", Fore.CYAN))
+    print(colored("  │  Paste cookie dari Mi Community", Fore.WHITE))
+    print(colored("  │  Tekan Enter untuk skip", Fore.WHITE))
+    print(colored("  └" + "─" * 28, Fore.CYAN))
+    print()
+
     valid_a = False
     valid_b = False
     cookie_a = ""
@@ -676,7 +686,7 @@ def main() -> None:
         
         if not valid_a:
             cookie_a = getpass.getpass(
-                "  " + colored(f'{"[Input!]":<{LABEL_WIDTH}}', Fore.YELLOW) + _t("cookie_a") + _t("cookie_skip")
+                "  " + colored(f'{"[?]":<{LABEL_WIDTH}}', Fore.YELLOW) + _t("cookie_a") + _t("cookie_skip")
             ).strip()
             
             if cookie_a:
@@ -693,7 +703,7 @@ def main() -> None:
 
         if not valid_b:
             cookie_b = getpass.getpass(
-                "  " + colored(f'{"[Input!]":<{LABEL_WIDTH}}', Fore.YELLOW) + _t("cookie_b") + _t("cookie_skip")
+                "  " + colored(f'{"[?]":<{LABEL_WIDTH}}', Fore.YELLOW) + _t("cookie_b") + _t("cookie_skip")
             ).strip()
             
             if cookie_b:
