@@ -71,7 +71,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(sys.argv[0]))
 LANG_FILE = os.path.join(SCRIPT_DIR, ".lang_config")
 LOCALE_DIR = os.path.join(SCRIPT_DIR, "locales")
 
-GITHUB_LOCALE_URL ="https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/locales/""
+GITHUB_LOCALE_URL = "https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/locales/"
 
 MENU_BAHASA = {
     "1": {"code": "id", "name": "Bahasa Indonesia"},
