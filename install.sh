@@ -48,7 +48,7 @@ mkdir -p locales
 curl -sL "$REPO_RAW/locales/id.json" -o locales/id.json 2>/dev/null || true
 curl -sL "$REPO_RAW/locales/en.json" -o locales/en.json 2>/dev/null || true
 
-# ── 5. Buat perintah global "ubl-go" ──
+# ── 5. Buat perintah global "ubl-" ──
 BIN_DIR="$HOME/.local/bin"
 mkdir -p "$BIN_DIR"
 
@@ -81,11 +81,11 @@ echo -e "${GREEN}  ✓  Install berhasil!${NC}"
 echo -e "${GREEN}══════════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "  Jalankan dengan perintah:"
-echo -e "  ${YELLOW}ubl-go${NC}"
+echo -e "  ${YELLOW}ubl-${NC}"
 echo ""
 echo -e "  Atau langsung:"
 echo -e "  ${YELLOW}python ~/mchrbl-cli/herorbl.py${NC}"
 echo ""
 echo -e "  ${CYAN}Reload Termux dulu (keluar & masuk lagi)${NC}"
-echo -e "  supaya perintah ${YELLOW}ubl-go${NC} langsung bisa dipakai."
+echo -e "  supaya perintah ${YELLOW}ubl-${NC} langsung bisa dipakai."
 echo ""
