@@ -11,24 +11,23 @@
 2. Jalankan perintah ini terlebih dahulu untuk persiapan.
 
 ```bash
-
 termux-setup-storage
+```
+3. lalu izinkan dan lanjutkan perintah berikutnya.
 
-
-```markdown
 ```bash
 pkg update && pkg upgrade -y
-
-```markdown
+```
 ```bash
-
 pkg install python git curl -y
-```markdown
+```
+4. lalu paste ini di termux.
+
 ```bash
+bash <(curl -s https://raw.githubusercontent.com/ProjectRedis/mchrbl-cli/refs/heads/main/install.sh)
+```
+5. Reload termux dan ketik.
 
-bash <(curl -s https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/install.sh)
-
-```markdown
 ```bash
-
 ubl-go
+```
