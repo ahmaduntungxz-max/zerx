@@ -24,7 +24,7 @@ pkg install python git curl -y
 4. lalu paste ini di termux.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ProjectRedis/mchrbl-cli/refs/heads/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/install.sh)
 ```
 5. Reload termux dan ketik.
 
