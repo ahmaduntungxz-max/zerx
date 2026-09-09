@@ -11,15 +11,24 @@
 2. Jalankan perintah ini terlebih dahulu untuk persiapan.
 
 ```bash
+
 termux-setup-storage
 
 
+```markdown
+```bash
 pkg update && pkg upgrade -y
 
-pkg install python git curl -y
+```markdown
+```bash
 
+pkg install python git curl -y
+```markdown
+```bash
 
 bash <(curl -s https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/install.sh)
 
+```markdown
+```bash
 
 ubl-go
