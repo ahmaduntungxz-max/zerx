@@ -29,5 +29,5 @@ bash <(curl -s https://raw.githubusercontent.com/ahmaduntungxz-max/zerx/main/ins
 5. Reload termux dan ketik.
 
 ```bash
-ubl-go
+ubl-
 ```
