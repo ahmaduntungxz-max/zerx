@@ -15,7 +15,7 @@ NC='\033[0m'
 
 echo -e "${CYAN}"
 echo "══════════════════════════════════════════════════════════"
-echo "   MCHR-BL CLI  •  One-Click Installer"
+echo "    ZERX-UBL  •  One-Click Installer"
 echo "══════════════════════════════════════════════════════════"
 echo -e "${NC}"
 
@@ -52,13 +52,13 @@ curl -sL "$REPO_RAW/locales/en.json" -o locales/en.json 2>/dev/null || true
 BIN_DIR="$HOME/.local/bin"
 mkdir -p "$BIN_DIR"
 
-cat > "$BIN_DIR/ubl-go" << 'EOF'
+cat > "$BIN_DIR/ubl-" << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 cd "$HOME/mchrbl-cli"
 python herorbl.py "$@"
 EOF
 
-chmod +x "$BIN_DIR/ubl-go"
+chmod +x "$BIN_DIR/ubl-"
 chmod +x herorbl.py
 
 # ── 6. Tambah ke PATH ──
